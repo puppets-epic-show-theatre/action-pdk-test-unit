@@ -1,0 +1,9 @@
+---
+name: action-pdk-test-unit
+description: Runs `pdk test unit` on your code
+branding:
+  icon: check-square
+  color: orange
+runs:
+  using: docker
+  image: Dockerfile
