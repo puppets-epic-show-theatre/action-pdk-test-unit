@@ -2,6 +2,8 @@
 
 set -x
 
+apt install -f ubuntu-dev-tools
+
 if [ -n "$PUPPET_VERSION" ]; then
   additional_opts="--puppet-version $PUPPET_VERSION"
 elif [ -n "$PE_VERSION" ]; then
