@@ -2,7 +2,7 @@ ARG PDKIMAGE=puppet/pdk:latest
 
 FROM $PDKIMAGE
 
-RUN apt update && apt add --no-cache build-base
+RUN apt-get update && apt-get install build-essential
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
