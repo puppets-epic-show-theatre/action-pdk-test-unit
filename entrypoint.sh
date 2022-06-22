@@ -10,4 +10,8 @@ else
   additional_opts=""
 fi
 
-pdk test unit --format=text $additional_opts
+if [ -n "$MODULE_DIR" ]; then
+  cd $MODULE_DIR && pdk test unit --format=text $additional_opts
+else
+  pdk test unit --format=text $additional_opts
+fi

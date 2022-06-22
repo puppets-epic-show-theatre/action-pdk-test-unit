@@ -11,6 +11,9 @@ inputs:
   pdk-image:
     description: A string indicating the docker image to build from, such as "puppet/pdk:latest" or "puppet/pdk:nightly".
     required: false
+  module-dir:
+    description: A string indicating the module location if not workspace root
+    required: false        
 branding:
   icon: check-square
   color: orange
@@ -21,3 +24,4 @@ runs:
     PUPPET_VERSION: ${{ inputs.puppet-version }}
     PE_VERSION: ${{ inputs.pe-version }}
     PDKIMAGE: ${{ inputs.pdk-image }}
+    MODULE_DIR: ${{ inputs.module-dir }}
