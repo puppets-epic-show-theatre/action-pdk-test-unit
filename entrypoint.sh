@@ -10,4 +10,4 @@ else
   additional_opts=""
 fi
 
-pdk test unit --format=text $additional_opts
+pdk update && pdk test unit --format=text $additional_opts
